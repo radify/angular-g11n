@@ -37,7 +37,7 @@ We have several Gulp tasks that can help you:
 Testing uses [Jasmine](http://jasmine.github.io/), [Karma](http://karma-runner.github.io/0.12/index.html), [PhantomJS](http://phantomjs.org/) and [Gulp](http://gulpjs.com/). All these are installed when you do an `npm install --dev`. You can run the tests with:
 
 ```bash
-node_modules/gulp/bin/gulp.js test
+bin/test
 ```
 
 If you run the watch task, it will run the tests in 'watch' mode, so it'll run on any change you make:
