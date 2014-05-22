@@ -1,6 +1,8 @@
 angular-g11n
 ============
 
+[![Build Status](https://travis-ci.org/uor/angular-g11n.svg?branch=initial)](https://travis-ci.org/uor/angular-g11n)
+
 Simple globalization (internationalization + localization) for AngularJS. Developed by [Radify](http://radify.io).
 
 ## Usage example
