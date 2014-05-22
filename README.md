@@ -3,57 +3,72 @@ angular-g11n
 
 [![Build Status](https://travis-ci.org/uor/angular-g11n.svg?branch=initial)](https://travis-ci.org/uor/angular-g11n)
 
-Simple globalization (internationalization + localization) for AngularJS. Developed by [Radify](http://radify.io).
+Simple globalization (internationalization + localization) for AngularJS. Developed by [Radify](http://radify.io). Allows you to manage your g11n in simple JSON format and to switch languages on the fly.
 
-## Usage example
+# Quickstart
 
-TODO pick out a better example
+Install into your project. You can clone it or do it as a submodule but the easiest way is to user Bower to manage your dependencies:
+
+```bash
+bower install angular-g11n
+```
+
+Then, include it on your page:
+
+```html
+<script src="bower_components/angular-g11n/src/angular-g11n.js"></script>
+```
+
+In your app.js (or whatever you use to define your application), load the `ur.g11n` module:
 
 ```javascript
-services.service('UserCache', function(model, Locale) {
-	return {
-		// ...
-		userNotFound: function(id) {
-			this.userCache[id] = {
-				name: Locale('admin.reports.not-found'),
-				emailNormal: Locale('admin.reports.not-found')
-			};
-		}
-	};
+'use strict';
+
+var app = angular.module('sampleApp', [
+    'ur.g11n'
+]);
+
+app.run(function(Locale) {
+    Locale.set('en', {
+        "lead-copy": "Simple Translations for AngularJS"
+    });
+    Locale.set('izzle', {
+        "lead-copy": "Sizzle Trizzle for Angulizzle "
+    });
+
+    Locale.uses('en');
 });
 ```
 
-## Contributing
+Now, in your templates, you have a 't' helper, so you might include something like:
 
-If you want to contribute to the angular-g11n project, please feel free! Install all the developer dependencies with:
-
-```bash
-npm install
-bower install --dev
+```html
+<div class="jumbotron">
+  <h1>angular-g11n</h1>
+  <p class="lead">
+    {{ 'lead-copy' | t }}
+  </p>
+</div>
 ```
 
-We have several Gulp tasks that can help you:
+Try changing the Locale.uses line to:
 
-### Running the tests
-
-Testing uses [Jasmine](http://jasmine.github.io/), [Karma](http://karma-runner.github.io/0.12/index.html), [PhantomJS](http://phantomjs.org/) and [Gulp](http://gulpjs.com/). All these are installed when you do an `npm install --dev`. You can run the tests with:
-
-```bash
-bin/test
+```javascript
+// ...
+    Locale.uses('izzle');
+});
 ```
 
-If you run the watch task, it will run the tests in 'watch' mode, so it'll run on any change you make:
+Then reload the page and refresh the page. You'll see the copy has changed!
 
-```bash
-node_modules/gulp/bin/gulp.js watch
-```
+# Documentation
 
-### Linting the code
+This page is just to get you started, for more detail, see the pages below:
 
-```bash
-node_modules/gulp/bin/gulp.js lint
-```
+[manual.md](docs/manual.md) - a full guide to using angular-g11n.
 
-### Committing back
+[API.md](docs/API.md) - details of the methods available in the angular-g11n API.
 
-Simply push your changes to a branch on your repository and submit a pull request to [the canonical repo](https://github.com/uor/angular-g11n).
+[LICENSE](LICENSE) - terms and conditions.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) - guide to contributing to angular-g11n.

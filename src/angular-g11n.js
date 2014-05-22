@@ -18,17 +18,17 @@
 			 * @requires $interpolate
 			 *
 			 * @description
-			 * The `Locale` service translate a keyID to the current locale.
+			 * The `Locale` service translates a keyID to the current locale.
 			 *
 			 * Setting manually a catalog:
 			 * <pre>
 			 *     Locale.set('en', {
-			 *        'hello': 'Hello World !'
-			 *        'hello-name': 'Hello {{ name }} !'
+			 *        'hello': 'Hello World!'
+			 *        'hello-name': 'Hello {{ name }}!'
 			 *        'hello-world': {
-			 *             0: 'Hello {{ name }} you have no friends !',
-			 *             1: 'Hello {{ name }} you have one friend !',
-			 *             n: 'Hello {{ name }} you have {{ count }} friends !'
+			 *             0: 'Hello {{ name }} you have no friends!',
+			 *             1: 'Hello {{ name }} you have one friend!',
+			 *             n: 'Hello {{ name }} you have {{ count }} friends!'
 			 *        }
 			 *     });
 			 * </pre>
@@ -45,9 +45,9 @@
 			 *
 			 * Example of use:
 			 * <pre>
-			 *     Locale('hello'); // Hello World !
-			 *     Locale('hello-name', {name: 'Angular'}); // Hello Angular !
-			 *     Locale('hello-world', {name: 'Angular', count: 5}); // Hello Angular you have 5 friends !
+			 *     Locale('hello'); // Hello World!
+			 *     Locale('hello-name', {name: 'Angular'}); // Hello Angular!
+			 *     Locale('hello-world', {name: 'Angular', count: 5}); // Hello Angular you have 5 friends!
 			 * </pre>
 			 *
 			 * @param {string} key A token which represents a keyID
@@ -148,9 +148,9 @@
 			 * @name ur.g11n.LocaleLoader
 			 *
 			 * @description
-			 * The `LocaleLoader` factory allow to dynamically load catalogs from an URL.
+			 * The `LocaleLoader` factory is able to dynamically load catalogs from an URL.
 			 *
-			 * Defining the catalog urls:
+			 * Defining the catalog URLs:
 			 * <pre>
 			 *     LocaleLoader.catalogs([
 			 *         {lang: 'en', url: '/js/catalogs/lang-en.json'},
@@ -158,7 +158,7 @@
 			 *     ]);
 			 * </pre>
 			 *
-			 * Example of use:
+			 * Examples of usage once catalog URLs are defined:
 			 * <pre>
 			 *     LocaleLoader('en').then(function(lang) {
 			 *         Locale.uses(lang);
@@ -166,13 +166,13 @@
 			 *     });
 			 *
 			 *     LocaleLoader('en_US').then(function(lang) {
-			 *         Locale.uses(lang); //lang is the finded one i.e 'en' here.
+			 *         Locale.uses(lang); //lang is the found language, e.g. 'en' in this example as it's closest to 'en_US'.
 			 *         Locale('hello');
 			 *     });
 			 * </pre>
 			 *
-			 * @param {string} lang The language id
-			 * @param {string} url The url of a JSON catalog
+			 * @param {string} lang The language id, e.g. 'en'
+			 * @param {string} url The url of a JSON catalog, e.g. '/js/catalogs/lang-en.json' or a public URL
 			 */
 			$get: ['Locale', '$http', '$q', function(Locale, $http, $q) {
 				var catalogs = [];
