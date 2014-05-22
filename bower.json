@@ -1,0 +1,28 @@
+{
+  "name": "angular-g11n",
+  "version": "0.1.0",
+  "homepage": "https://github.com/uor/angular-g11n",
+  "description": "Simple globalization (internationalization + localization) for AngularJS",
+  "main": "src/angular-g11n.js",
+  "keywords": [
+    "globalization",
+    "internationalization",
+    "localization",
+    "angular",
+    "angularjs",
+    "globalisation",
+    "internationalisation",
+    "localisation"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.3",
+    "angular-mocks": "1.2.3"
+  }
+}
