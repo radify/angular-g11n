@@ -1,0 +1,33 @@
+{
+  "name": "angular-g11n",
+  "version": "0.1.0",
+  "homepage": "https://github.com/uor/angular-g11n",
+  "description": "Simple globalization (internationalization + localization) for AngularJS",
+  "main": "src/angular-g11n.js",
+  "keywords": [
+    "globalization",
+    "internationalization",
+    "localization",
+    "angular",
+    "angularjs",
+    "globalisation",
+    "internationalisation",
+    "localisation"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "gulp": "~3.6.2",
+    "gulp-jasmine": "~0.2.0",
+    "gulp-karma": "0.0.4",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-jasmine": "~0.1.5",
+    "phantomjs": "~1.9.7-6",
+    "gulp-jshint": "~1.6.1"
+  }
+}
