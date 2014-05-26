@@ -1,6 +1,6 @@
 {
 	"lead-copy": "Simple Translations for AngularJS",
-	"brought-to-you-by": "xBrought to you by",
+	"brought-to-you-by": "Brought to you by",
 	"Where can I get angular-g11n?": "Where can I get angular-g11n?",
 	"hello-world": {
 		"0": "Hello {{ name }} you have no friends!",
