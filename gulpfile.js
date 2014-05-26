@@ -3,6 +3,9 @@ var jshint = require('gulp-jshint');
 var karma = require('gulp-karma');
 var jasmine = require('gulp-jasmine');
 
+var exporter = require('./util/export-catalog');
+var importer = require('./util/import-catalog');
+
 var testFiles = [ // TODO remove?
 	'bower_components/angular/angular.js',
 	'bower_components/angular-mocks/angular-mocks.js',
@@ -10,7 +13,13 @@ var testFiles = [ // TODO remove?
 	'spec/*.js'
 ];
 
-//	TODO add import/export functionality
+gulp.task('export', function() {
+    exporter.run();
+});
+
+gulp.task('import', function() {
+    importer.run();
+});
 
 // tun tests once
 gulp.task('test', function() {

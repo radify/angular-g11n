@@ -1,10 +1,10 @@
 {
-    "lead-copy": "Simple Translations for AngularJS",
-    "brought-to-you-by": "Brought to you by",
-    "Where can I get angular-g11n?": "Where can I get angular-g11n?",
-    "hello-world": {
-        "0": "Hello {{ name }} you have no friends!",
-        "1": "Hello {{ name }} you have one friend!",
-        "n": "Hello {{ name }} you have {{ count }} friends!"
-    }
+	"lead-copy": "Simple Translations for AngularJS",
+	"brought-to-you-by": "xBrought to you by",
+	"Where can I get angular-g11n?": "Where can I get angular-g11n?",
+	"hello-world": {
+		"0": "Hello {{ name }} you have no friends!",
+		"1": "Hello {{ name }} you have one friend!",
+		"n": "Hello {{ name }} you have {{ count }} friends!"
+	}
 }

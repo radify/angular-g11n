@@ -3,7 +3,7 @@ angular-g11n
 
 [![Build Status](https://travis-ci.org/uor/angular-g11n.svg?branch=initial)](https://travis-ci.org/uor/angular-g11n)
 
-Simple globalization (internationalization + localization) for AngularJS. Developed by [Radify](http://radify.io). Allows you to manage your g11n in simple JSON format and to switch languages on the fly.
+Simple globalization (internationalization + localization) for AngularJS. Developed by [Radify](http://radify.io). Allows you to manage your g11n in simple JSON format and to switch languages on the fly. Also supports CSV import/export as a Gulp task.
 
 # Quickstart
 
@@ -68,6 +68,8 @@ This page is just to get you started, for more detail, see the pages below:
 [manual.md](docs/manual.md) - a full guide to using angular-g11n.
 
 [API.md](docs/API.md) - details of the methods available in the angular-g11n API.
+
+[managing-g11n-as-csv.md](docs/managing-g11n-as-csv.md) - you can manage g11n using CSV files if JSON doesn't suit you.
 
 [LICENSE](LICENSE) - terms and conditions.
 

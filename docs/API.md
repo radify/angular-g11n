@@ -97,6 +97,8 @@ LocaleLoader('en_US').then(function(lang) {
 
 [manual.md](manual.md) - a full guide to using angular-g11n.
 
+[managing-g11n-as-csv.md](managing-g11n-as-csv.md) - you can manage g11n using CSV files if JSON doesn't suit you.
+
 [LICENSE](../LICENSE) - terms and conditions.
 
 [CONTRIBUTING.md](../CONTRIBUTING.md) - guide to contributing to angular-g11n.
