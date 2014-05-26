@@ -169,6 +169,8 @@ For more information, please see [API.md](API.md).
 
 [API.md](API.md) - details of the methods available in the angular-g11n API.
 
+[managing-g11n-as-csv.md](managing-g11n-as-csv.md) - you can manage g11n using CSV files if JSON doesn't suit you.
+
 [LICENSE](../LICENSE) - terms and conditions.
 
 [CONTRIBUTING.md](../CONTRIBUTING.md) - guide to contributing to angular-g11n.

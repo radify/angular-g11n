@@ -39,6 +39,8 @@ Simply push your changes to a branch on your repository and submit a pull reques
 
 [manual.md](docs/manual.md) - a full guide to using angular-g11n.
 
+[managing-g11n-as-csv.md](docs/managing-g11n-as-csv.md) - you can manage g11n using CSV files if JSON doesn't suit you.
+
 [API.md](docs/API.md) - details of the methods available in the angular-g11n API.
 
 [LICENSE](LICENSE) - terms and conditions.

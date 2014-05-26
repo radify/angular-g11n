@@ -1,11 +1,10 @@
 {
-    "lead-copy": "Sizzle Trizzle for Angulizzle",
-    "brought-to-you-by": "Brizzought to you by",
-    "Where can I get angular-g11n?": "Whizzle cizzle I gizzle angulizzle?",
-    "Switch language": "Swizzle lizzle",
-    "hello-world": {
-        "0": "Hizzle {{ name }} you hizzle no frizzle!",
-        "1": "Hizzle {{ name }} you hizzle one frizzle!",
-        "n": "Hizzle {{ name }} you hizzle {{ count }} frizzles!"
-    }
+	"lead-copy": "Sizzle Trizzle for Angulizzle",
+	"brought-to-you-by": "Brizzought to you by",
+	"Where can I get angular-g11n?": "Whizzle cizzle I gizzle angulizzle?",
+	"hello-world": {
+		"0": "Hizzle {{ name }} you hizzle no frizzle!",
+		"1": "Hizzle {{ name }} you hizzle one frizzle!",
+		"n": "Hizzle {{ name }} you hizzle {{ count }} frizzles!"
+	}
 }

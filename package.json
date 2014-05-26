@@ -28,6 +28,10 @@
     "karma-phantomjs-launcher": "~0.1.4",
     "karma-jasmine": "~0.1.5",
     "phantomjs": "~1.9.7-6",
-    "gulp-jshint": "~1.6.1"
+    "gulp-jshint": "~1.6.1",
+    "gulp-util": "~2.2.14",
+    "through2": "~0.4.2",
+    "yargs": "~1.2.2",
+    "gulp-convert": "~0.1.0"
   }
 }
