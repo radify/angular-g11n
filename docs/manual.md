@@ -161,7 +161,33 @@ You could persist this to your user's profile to ensure they get the same langua
 window.navigator.language
 ```
 
-For more information, please see [API.md](API.md).
+## Accessing g11n from code
+
+You can access g11n from code as well as from the template. So, if you needed to translate something in a service or controller, that's no problem with angular-g11n!
+
+In the template:
+
+```html
+  <div>
+    <br/>
+    <button class="btn btn-large" ng-click="translateInCode()">Translate in code</button>
+  </div>
+```
+
+In controllers/main.js:
+
+```javascript
+// ...
+angular.module('sampleApp')
+  .controller('MainCtrl', function ($scope, LocaleLoader, Locale, $window) {
+    angular.extend($scope, {
+        // ...
+        translateInCode: function() {
+            $window.alert("Locale('lead-copy') is '" + Locale('lead-copy') + "'");
+        }
+    })
+  });
+```
 
 # Documentation
 
