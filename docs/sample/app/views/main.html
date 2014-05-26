@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1>angular-g11n</h1>
+  <p class="lead">
+    {{ 'lead-copy' | t }}
+  </p>
+  <p><em>{{ 'brought-to-you-by' | t }} <a href="http://radify.io">Radify</a></em></p>
+
+  <p>{{ 'hello-world' | t: { name: "Person 1", count: 5 } }}</p>
+
+  <h3>{{ 'Switch language' | t }}</h3>
+  <button class="btn btn-large" ng-click="setLocale('en')">English</button>
+  <button class="btn btn-large" ng-click="setLocale('izzle')">izzle</button>
+</div>
+
+<div class="row marketing">
+  <h4>{{ 'Where can I get angular-g11n?' | t }}</h4>
+  <p>
+    <a href=https://github.com/uor/angular-g11n">https://github.com/uor/angular-g11n</a>
+  </p>
+</div>
+
+<div class="footer">
+  <p>{{ 'brought-to-you-by' | t }} <a href="http://radify.io">Radify</a></p>
+</div>
