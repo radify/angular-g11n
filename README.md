@@ -59,7 +59,7 @@ Try changing the Locale.uses line to:
 });
 ```
 
-Then reload the page and refresh the page. You'll see the copy has changed!
+Then refresh the page. You'll see the copy has changed!
 
 # Documentation
 
