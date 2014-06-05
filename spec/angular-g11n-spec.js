@@ -264,5 +264,18 @@ describe('ur.g11n', function(){
 				}).toThrow(new Error('No pending request to flush !'));
 			});
 		});
+
+		it('should override headers', function () {
+			inject(function(Locale, LocaleLoader) {
+				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json', {
+					'A-Token': 'xxz',
+					"Accept":"application/json, text/plain, */*"
+				});
+				LocaleLoader('en', { 'A-Token': 'xxz' }).then(function() {
+					expect(Locale('hello')).toBe('Hello World !');
+				});
+				$httpBackend.flush();
+			});
+		});
 	});
 });

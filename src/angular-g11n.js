@@ -189,7 +189,7 @@
 					return null;
 				};
 
-				var LocaleLoader = function(lang) {
+				var LocaleLoader = function(lang, headers) {
 					var deferred = $q.defer(), i;
 
 					i = _findUrl(lang, true);
@@ -205,9 +205,7 @@
 						return deferred.promise;
 					}
 
-					// @hack We're loading language files from S3, so forcibly override Authorization header
-					// set by angular-http-auth:
-					var headers = { Authorization: null };
+					headers = headers || {};
 
 					$http.get(catalogs[i].url, { headers: headers }).success(function(data, status, headers) {
 						catalogs[i].loaded = true;
