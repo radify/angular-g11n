@@ -152,7 +152,7 @@ describe('ur.g11n', function(){
 
 		beforeEach(inject(function(Locale, LocaleLoader, $injector) {
 			$httpBackend = $injector.get('$httpBackend');
-			$httpBackend.when('GET', 'https://s3.amazonaws.com/pixwel/catalogs/lang-en.json').respond({
+			$httpBackend.when('GET', 'http://domain.com/lang-en.json').respond({
 				'hello': 'Hello World !',
 				'hello-name': 'Hello {{ name }} !',
 				'hello-world': {
@@ -162,7 +162,7 @@ describe('ur.g11n', function(){
 				}
 			});
 			LocaleLoader.catalogs([{
-				lang: 'en', url: 'https://s3.amazonaws.com/pixwel/catalogs/lang-en.json'
+				lang: 'en', url: 'http://domain.com/lang-en.json'
 			}]);
 			Locale.reset();
 		}));
@@ -182,7 +182,7 @@ describe('ur.g11n', function(){
 			inject(function(LocaleLoader) {
 				expect(function(){
 					LocaleLoader.catalogs({
-						lang: 'en', url: 'https://s3.amazonaws.com/pixwel/catalogs/lang-en.json'
+						lang: 'en', url: 'http://domain.com/lang-en.json'
 					});
 				}).toThrow(new Error('Catalogs must be an array of objects.'));
 			});
@@ -198,7 +198,7 @@ describe('ur.g11n', function(){
 
 		it('should show a simple translation message', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json');
+				$httpBackend.expectGET('http://domain.com/lang-en.json');
 				LocaleLoader('en').then(function() {
 					expect(Locale('hello')).toBe('Hello World !');
 				});
@@ -208,7 +208,7 @@ describe('ur.g11n', function(){
 
 		it('should show a translation message with variables', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json');
+				$httpBackend.expectGET('http://domain.com/lang-en.json');
 				LocaleLoader('en').then(function() {
 					expect(Locale('hello-name', {name: 'Angular'})).toBe('Hello Angular !');
 				});
@@ -218,7 +218,7 @@ describe('ur.g11n', function(){
 
 		it('should show a translation message with count variable', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json');
+				$httpBackend.expectGET('http://domain.com/lang-en.json');
 				LocaleLoader('en').then(function() {
 					expect(Locale('hello-world', { name: 'Angular', count: 0 })).toBe('Hello Angular you have no friends !');
 					expect(Locale('hello-world', { name: 'Angular', count: 1 })).toBe('Hello Angular you have one friend !');
@@ -230,7 +230,7 @@ describe('ur.g11n', function(){
 
 		it('should show a translation message with missing count variable', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json');
+				$httpBackend.expectGET('http://domain.com/lang-en.json');
 				LocaleLoader('en').then(function() {
 					expect(Locale('hello-world', { name: 'Angular' })).toBe('Hello Angular you have no friends !');
 				});
@@ -241,7 +241,7 @@ describe('ur.g11n', function(){
 
 		it('should show a simple translation message with similar language', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json');
+				$httpBackend.expectGET('http://domain.com/lang-en.json');
 				LocaleLoader('en-US').then(function() {
 					expect(Locale('hello')).toBe('Hello World !');
 				});
@@ -251,7 +251,7 @@ describe('ur.g11n', function(){
 
 		it('should not load a catalog twice', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json');
+				$httpBackend.expectGET('http://domain.com/lang-en.json');
 				LocaleLoader('en').then(function() {
 					expect(Locale('hello')).toBe('Hello World !');
 				});
@@ -267,7 +267,7 @@ describe('ur.g11n', function(){
 
 		it('should override headers', function () {
 			inject(function(Locale, LocaleLoader) {
-				$httpBackend.expectGET('https://s3.amazonaws.com/pixwel/catalogs/lang-en.json', {
+				$httpBackend.expectGET('http://domain.com/lang-en.json', {
 					'A-Token': 'xxz',
 					"Accept":"application/json, text/plain, */*"
 				});
