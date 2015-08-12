@@ -21,19 +21,23 @@ gulp.task('import', function() {
     importer.run();
 });
 
-// tun tests once
 gulp.task('test', function() {
-	return gulp.src(testFiles)
-		.pipe(karma({
-			configFile: 'karma.conf.js',
-			action: 'run'
-		}))
-		.on('error', function(err) {
-			// failed tests cause gulp to exit non-zero
-			throw err;
-		})
-		.pipe(jasmine());
+	return gulp.src(['spec/**/*.js'])
+           .pipe(jasmine());
 });
+// tun tests once
+// gulp.task('test', function() {
+// 	return gulp.src(testFiles)
+// 		.pipe(karma({
+// 			configFile: 'karma.conf.js',
+// 			action: 'run'
+// 		}))
+// 		.on('error', function(err) {
+// 			// failed tests cause gulp to exit non-zero
+// 			throw err;
+// 		})
+// 		.pipe(jasmine());
+// });
 
 // continuously run tests on change
 gulp.task('watch', function() {
