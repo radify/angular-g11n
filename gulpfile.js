@@ -1,7 +1,6 @@
 var gulp   = require('gulp');
 var jshint = require('gulp-jshint');
-var karma = require('gulp-karma');
-var jasmine = require('gulp-jasmine');
+var Server = require('karma').Server;
 
 var exporter = require('./util/export-catalog');
 var importer = require('./util/import-catalog');
@@ -21,18 +20,11 @@ gulp.task('import', function() {
     importer.run();
 });
 
-// tun tests once
-gulp.task('test', function() {
-	return gulp.src(testFiles)
-		.pipe(karma({
-			configFile: 'karma.conf.js',
-			action: 'run'
-		}))
-		.on('error', function(err) {
-			// failed tests cause gulp to exit non-zero
-			throw err;
-		})
-		.pipe(jasmine());
+gulp.task('test', function(cb) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js'
+    ,singleRun: true
+  }, cb).start();
 });
 
 // continuously run tests on change
