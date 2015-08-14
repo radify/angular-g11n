@@ -4,6 +4,10 @@
   "homepage": "https://github.com/uor/angular-g11n",
   "description": "Simple globalization (internationalization + localization) for AngularJS",
   "main": "src/angular-g11n.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radify/angular-g11n.git"
+  },
   "keywords": [
     "globalization",
     "internationalization",
@@ -22,16 +26,16 @@
     "tests"
   ],
   "devDependencies": {
-    "gulp": "~3.6.2",
-    "gulp-jasmine": "~0.2.0",
-    "gulp-karma": "0.0.4",
-    "karma-phantomjs-launcher": "~0.1.4",
-    "karma-jasmine": "~0.1.5",
+    "angular": "^1.4.3",
+    "angular-mocks": "^1.4.3",
+    "gulp": "~3.9.0",
+    "gulp-convert": "~0.2.0",
+    "gulp-jshint": "~1.11.2",
+    "gulp-util": "~3.0.6",
+    "karma-jasmine": "~0.3.6",
+    "karma-phantomjs-launcher": "~0.2.1",
     "phantomjs": "~1.9.7-6",
-    "gulp-jshint": "~1.6.1",
-    "gulp-util": "~2.2.14",
-    "through2": "~0.4.2",
-    "yargs": "~1.2.2",
-    "gulp-convert": "~0.1.0"
+    "through2": "~2.0.0",
+    "yargs": "~3.18.0"
   }
 }
