@@ -2,8 +2,9 @@ angular-g11n
 ============
 
 [ ![Travis Status for radify/angular-g11n](https://travis-ci.org/radify/angular-g11n.svg)](https://travis-ci.org/radify/angular-g11n)
-[ ![Bower version](https://badge.fury.io/bo/angular-g11n.svg)](http://badge.fury.io/bo/angular-g11n)
-[ ![Dependencies Status](https://david-dm.org/radify/angular-g11n.svg)](https://david-dm.org/radify/angular-g11n.svg)
+[ ![Bower version](https://badge.fury.io/bo/angular-g11n.svg)](https://github.com/radify/angular-g11n)
+[ ![Dependency Status](https://david-dm.org/radify/angular-g11n.svg)](https://david-dm.org/radify/angular-g11n)
+[ ![devDependency Status](https://david-dm.org/radify/angular-g11n/dev-status.svg)](https://david-dm.org/radify/angular-g11n#info=devDependencies)
 
 Simple globalization (internationalization + localization) for AngularJS. Developed by [Radify](http://radify.io). Allows you to manage your g11n in simple JSON format and to switch languages on the fly. Also supports CSV import/export as a Gulp task.
 
