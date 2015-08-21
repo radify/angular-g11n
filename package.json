@@ -1,6 +1,6 @@
 {
   "name": "angular-g11n",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/uor/angular-g11n",
   "description": "Simple globalization (internationalization + localization) for AngularJS",
   "main": "src/angular-g11n.js",
